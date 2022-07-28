@@ -23,14 +23,14 @@ export const Items = ({ search, filter, computer }: Props) => {
 
   function order(newList: typeof plates) {
     switch (computer) {
-      case 'portion':
-        return newList.sort((a, b) => (a.size > b.size ? 1 : -1))
-      case 'amount_people':
-        return newList.sort((a, b) => (a.serving > b.serving ? 1 : -1))
-      case 'price':
-        return newList.sort((a, b) => (a.price > b.price ? 1 : -1))
-      default:
-        return newList
+    case 'portion':
+      return newList.sort((a, b) => (a.size > b.size ? 1 : -1))
+    case 'amount_people':
+      return newList.sort((a, b) => (a.serving > b.serving ? 1 : -1))
+    case 'price':
+      return newList.sort((a, b) => (a.price > b.price ? 1 : -1))
+    default:
+      return newList
     }
   }
 
